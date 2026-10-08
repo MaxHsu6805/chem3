@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>氧化還原 × 電化學｜互動學習網</title>
+<meta name="description" content="高中選修化學Ⅳ 氧化還原反應與電化學完整圖解整理、102學測/指考以來經典試題、大學延伸（能斯特方程式、Latimer/Frost圖）、互動練習工具。">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<div class="layout">
+
+  <!-- ============ 側欄 ============ -->
+  <aside id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">e<sup>−</sup></div>
+      <div class="brand-txt">
+        <b>Redox × Electrochem</b>
+        <span>氧化還原與電化學互動學習網</span>
+      </div>
+    </div>
+
+    <div class="search-box">
+      <input id="searchInput" type="search" placeholder="🔍 搜尋全站（如：歧化、鹽橋、能斯特）" autocomplete="off">
+      <div id="searchResults" class="search-results" hidden></div>
+    </div>
+
+    <nav id="nav"></nav>
+
+    <div class="sidebar-foot">
+      <button id="btnReset" class="btn-ghost btn-sm" type="button">↺ 重置學習進度</button>
+      <div class="foot-note">進度儲存在你的瀏覽器（localStorage）</div>
+    </div>
+  </aside>
+
+  <!-- ============ 主內容 ============ -->
+  <div class="main">
+    <header class="topbar">
+      <button id="navToggle" class="nav-toggle" type="button" aria-label="選單">☰</button>
+      <div class="crumb" id="crumb">首頁</div>
+      <div class="topbar-right">
+        <span class="chip" id="chipProgress">完成度 0%</span>
+        <button id="btnDark" class="btn-ghost btn-sm" type="button" title="切換深色模式">🌓</button>
+        <button id="btnPrint" class="btn-ghost btn-sm" type="button" title="列印本頁">🖨</button>
+      </div>
+    </header>
+
+    <main id="view"></main>
+
+    <footer class="foot">
+      <p>本網內容依據 108 課綱「選修化學 Ⅳ 第 1 章 氧化還原反應與電化學」編製，歷屆試題取材自大學入學考試中心公布之試題與答案（102 學年度起）。<br>
+      題目文字僅供個人學習使用，正式題幹請以大考中心公告原文為準。</p>
+      <div class="foot-links">
+        <button class="btn-ghost btn-sm" data-goto="prev">← 上一頁</button>
+        <button class="btn-ghost btn-sm" data-goto="top">↑ 回到頂端</button>
+        <button class="btn-ghost btn-sm" data-goto="next">下一頁 →</button>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<div id="toast"></div>
+
+<script type="module" src="scripts/app.js"></script>
+</body>
+</html>
